@@ -164,3 +164,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 ```
+
+## template layout
+
+### login page
+![image text](shotPic/login.png)
+
+### back_stage page
+![image text](shotPic/backStage.png)

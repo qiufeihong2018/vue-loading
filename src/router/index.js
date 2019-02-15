@@ -64,6 +64,18 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: '/charts',
+    component: Layout,
+    children: [
+      {
+        path: 'bar',
+        name: 'bar',
+        component: _import('charts/index'),
+        meta: { title: 'bar', icon: 'example' }
+      }
+    ]
+  },
   { path: '*', redirect: '/404', hidden: true }
 ]
 
