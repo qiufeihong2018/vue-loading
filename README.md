@@ -33,11 +33,7 @@ npm test
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## directory
-<<<<<<< HEAD
-```
-=======
 ```angular2
->>>>>>> e12e3fa8f51984dfc3bcef6e55a8bbd7578b47ba
 .
 ├── build
 │   ├── build.js
@@ -58,7 +54,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ├── package-lock.json
 ├── README.md
 ├── src
-<<<<<<< HEAD
 │   ├── App.vue
 │   ├── assets
 │   │   └── logo.png
@@ -67,7 +62,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 │   ├── main.js
 │   └── router
 │       └── index.js
-=======
 │   ├── api
 │   │   ├── login.js
 │   │   └── table.js
@@ -163,7 +157,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 │       ├── index.js
 │       ├── request.js
 │       └── validate.js
->>>>>>> e12e3fa8f51984dfc3bcef6e55a8bbd7578b47ba
 ├── static
 └── test
     ├── e2e
@@ -178,13 +171,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
         ├── setup.js
         └── specs
             └── HelloWorld.spec.js
-<<<<<<< HEAD
 ```
+## template layout
 
+### login page
+![image text](shotPic/login.png)
 
-=======
-
-
-
-```
->>>>>>> e12e3fa8f51984dfc3bcef6e55a8bbd7578b47ba
+### back_stage page
+![image text](shotPic/backStage.png)
