@@ -71,3 +71,23 @@ export function formatTime(time, option) {
 export function isExternal(path) {
   return /^(https?:|mailto:|tel:)/.test(path)
 }
+
+export function debounce(fun,wait,immediate){
+  let timeout
+  return function(){
+    let context=this
+    let args=arguments
+    if(timeout)clearTimeout(timeout)
+    if(immediate){
+      let callNow=!timeout
+      timeout=setTimeout(()=>{
+        timeout=null
+      },wait)
+      if(callNow)fun.apply(context,args)
+    }else{
+      timeout=setTimeout(()=>{
+        fun.apply(context,args)
+      },wait)
+    }
+  }
+}

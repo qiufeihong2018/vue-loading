@@ -52,7 +52,9 @@ module.exports = {
       'vars': 'all',
       'args': 'none'
     }],
+    'no-unused-expressions':'off',
     'no-mixed-spaces-and-tabs': 2,
+    'no-mixed-operators':'off',
     'eol-last': 'off',
     'semi': 'off',
     'no-underscore-dangle': 'off',
