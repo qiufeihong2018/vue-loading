@@ -1,2 +1,0 @@
-webpackJsonp([0],{TC2G:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("孙子组件:"+this._s(this.name))])},staticRenderFns:[]},i=n("VU/8")({name:"b",inject:["name"]},s,!1,null,null,null);t.default=i.exports}});
-//# sourceMappingURL=0.983c8010b9925bcce7ed.js.map
