@@ -6,7 +6,8 @@ Vue.use(Router)
 const _import = file => () => import('@/pages/' + file + '.vue')
 
 export const constantRouterMap = [
-  { path: '/loading', component: _import('loading') },
+  { path: '*', redirect: '/loading' },
+  { path: '/loading', component: _import('loading') }
 ]
 
 export default new Router({
