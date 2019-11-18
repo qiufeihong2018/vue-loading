@@ -18,11 +18,15 @@
           :visible.sync="openDrawer1"
           direction="rtl"
           :before-close="handleClose"
-          size="50%">
+          size="50%"
+        >
           <div style="padding:50px">
             <el-card class="el-card-html" shadow="always">
               <el-tag effect="dark" type="success">HTML</el-tag>
               <el-divider content-position="left">HTML</el-divider>
+              <template slot="highlight"><pre v-pre><code class="html">
+                <div>dfsdfasd </div>
+                </code></pre></template>
             </el-card>
             <el-card class="el-card-css" shadow="always">
               <el-tag effect="dark" type="success">CSS</el-tag>
@@ -43,7 +47,8 @@
           :visible.sync="openDrawer1"
           direction="rtl"
           :before-close="handleClose"
-          size="50%">
+          size="50%"
+        >
           <div style="padding:50px">
             <el-card class="el-card-html" shadow="always">
               <el-tag effect="dark" type="success">HTML</el-tag>
