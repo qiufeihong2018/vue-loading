@@ -33,8 +33,24 @@
 
         <el-col :span="6">
           <div class="grid-content bg-purple">
-            <el-tooltip class="item" effect="dark" content="旋转方块" placement="top">
-              <div @click="openDrawer1=true" class="squarePerspective" />
+            <el-tooltip class="item" effect="dark" content="旋转彩虹" placement="top">
+                <div class="loader-inner-19">
+                  <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                  </div>
+                  <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                  </div>
+                  <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                  </div>
+                  <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                  </div>
+                  <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                  </div>
+              </div>
             </el-tooltip>
           </div>
         </el-col>
@@ -444,50 +460,6 @@
 
 </style>
 
-
-<style scoped lang="less">
-  .squarePerspective {
-    width: 60px;
-    height: 60px;
-    background-image: linear-gradient(to right, #359fd4, #36b5c8, #37deb2);
-
-    margin: 100px auto;
-    -webkit-animation: rotateSquarePerspective 2.2s infinite ease-in-out; //无限的 慢快慢
-    animation: rotateSquarePerspective 2.2s infinite ease-in-out;
-  }
-
-  @-webkit-keyframes rotateSquarePerspective {
-    0% {
-      -webkit-transform: perspective(120px); //绕透视轴旋转120px
-    }
-
-    50% {
-      -webkit-transform: perspective(120px) rotateY(180deg); //绕y轴旋转
-    }
-
-    100% {
-      -webkit-transform: perspective(120px) rotateY(360deg) rotateX(360deg);
-    }
-  }
-
-  @keyframes rotateSquarePerspective {
-    0% {
-      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    }
-
-    50% {
-      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    }
-
-    100% {
-      transform: perspective(120px) rotateX(-360deg) rotateY(-360deg);
-      -webkit-transform: perspective(120px) rotateX(-360deg) rotateY(-360deg);
-    }
-  }
-
-</style>
 <style scoped>
   .loader {
     position: relative;
@@ -2559,6 +2531,115 @@
     100% {
       -webkit-transform: rotate(180deg) translateY(25px) scale(0.2);
       transform: rotate(180deg) translateY(25px) scale(0.3);
+    }
+  }
+
+</style>
+<style scoped>
+  /*LOADER-19*/
+
+  .loader-inner-19 {
+    height: 60px;
+    margin: auto;
+    position: absolute;
+    width: 100px;
+  }
+
+  .loader-line-wrap {
+    animation:
+      spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+
+    box-sizing: border-box;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform-origin: 50% 100%;
+    width: 100px;
+  }
+
+  .loader-line {
+    border: 4px solid transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+  }
+
+  .loader-line-wrap:nth-child(1) {
+    animation-delay: -50ms;
+  }
+
+  .loader-line-wrap:nth-child(2) {
+    animation-delay: -100ms;
+  }
+
+  .loader-line-wrap:nth-child(3) {
+    animation-delay: -150ms;
+  }
+
+  .loader-line-wrap:nth-child(4) {
+    animation-delay: -200ms;
+  }
+
+  .loader-line-wrap:nth-child(5) {
+    animation-delay: -250ms;
+  }
+
+  .loader-line-wrap:nth-child(1) .loader-line {
+    border-color: hsl(0, 80%, 60%);
+    height: 90px;
+    width: 90px;
+    top: 7px;
+  }
+
+  .loader-line-wrap:nth-child(2) .loader-line {
+    border-color: hsl(60, 80%, 60%);
+    height: 76px;
+    width: 76px;
+    top: 14px;
+  }
+
+  .loader-line-wrap:nth-child(3) .loader-line {
+    border-color: hsl(120, 80%, 60%);
+    height: 62px;
+    width: 62px;
+    top: 21px;
+  }
+
+  .loader-line-wrap:nth-child(4) .loader-line {
+    border-color: hsl(180, 80%, 60%);
+    height: 48px;
+    width: 48px;
+    top: 28px;
+  }
+
+  .loader-line-wrap:nth-child(5) .loader-line {
+    border-color: hsl(240, 80%, 60%);
+    height: 34px;
+    width: 34px;
+    top: 35px;
+  }
+
+  @keyframes spin {
+
+    0%,
+    15% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
     }
   }
 
