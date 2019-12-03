@@ -34,22 +34,22 @@
         <el-col :span="6">
           <div class="grid-content bg-purple">
             <el-tooltip class="item" effect="dark" content="旋转彩虹" placement="top">
-                <div class="loader-inner-19">
-                  <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                  </div>
-                  <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                  </div>
-                  <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                  </div>
-                  <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                  </div>
-                  <div class="loader-line-wrap">
-                    <div class="loader-line"></div>
-                  </div>
+              <div class="loader-inner-19">
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
               </div>
             </el-tooltip>
           </div>
@@ -292,10 +292,22 @@
         </el-col>
         <el-col :span="6">
           <div class="grid-content bg-purple">
+            <!-- https://codepen.io/CrocoDillon/full/Htycs -->
+            <el-tooltip class="item" effect="dark" content="缤纷井盖" placement="top">
+              <div class="loader-23"></div>
+            </el-tooltip>
           </div>
         </el-col>
         <el-col :span="6">
-          <div class="grid-content bg-purple"></div>
+          <div class="grid-content bg-purple">
+            <el-tooltip class="item" effect="dark" content="圆形水桶" placement="top">
+              <div class="shadow">
+                <div class="loader-24">
+                  <div class="mask"/>
+                </div>
+              </div>
+            </el-tooltip>
+          </div>
         </el-col>
         <el-col :span="6">
           <div class="grid-content bg-purple"></div>
@@ -2643,4 +2655,46 @@
     }
   }
 
+  /*LOADER-24*/
+
+.loader-24 {
+    background: -webkit-linear-gradient(left, skyblue 50%, #fafafa 50%); /* Foreground color, Background colour */
+    border-radius: 100%;
+    height: 100px; /* Height and width */
+    width: 100px; /* Height and width */
+    animation: time 8s steps(500, start) infinite;
+}
+.mask {
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    animation: mask 8s steps(250, start) infinite;
+    transform-origin: 100% 50%;
+}
+@-webkit-keyframes time {
+    100% { 
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes mask {
+    0% {
+        background: #fafafa; /* Background colour */
+        transform: rotate(0deg);
+    }
+    50% {
+        background: #fafafa; /* Background colour */
+        transform: rotate(-180deg);
+    }
+    50.01% {
+        background: skyBlue; /* Foreground colour */
+        transform: rotate(0deg);
+    }
+    100% {
+        background: skyBlue; /* Foreground colour */
+        transform: rotate(-180deg);
+    }
+}
 </style>
