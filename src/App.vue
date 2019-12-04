@@ -9,7 +9,7 @@ export default {
   name: 'App'
 };
 </script>
-<style lang="less">
+<style lang="less" scoped>
 * {
   margin: 0;
   padding: 0;

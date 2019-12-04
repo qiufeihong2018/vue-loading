@@ -303,14 +303,20 @@
             <el-tooltip class="item" effect="dark" content="圆形水桶" placement="top">
               <div class="shadow">
                 <div class="loader-24">
-                  <div class="mask"/>
+                  <div class="mask" />
                 </div>
               </div>
             </el-tooltip>
           </div>
         </el-col>
         <el-col :span="6">
-          <div class="grid-content bg-purple"></div>
+          <div class="grid-content bg-purple">
+            <el-tooltip class="item" effect="dark" content="隐形圆盘" placement="top">
+              <div class="loader-25">
+                <p></p>
+              </div>
+            </el-tooltip>
+          </div>
         </el-col>
       </el-row>
       <el-row :gutter="40">
@@ -2657,14 +2663,18 @@
 
   /*LOADER-24*/
 
-.loader-24 {
-    background: -webkit-linear-gradient(left, skyblue 50%, #fafafa 50%); /* Foreground color, Background colour */
+  .loader-24 {
+    background: -webkit-linear-gradient(left, skyblue 50%, #fafafa 50%);
+    /* Foreground color, Background colour */
     border-radius: 100%;
-    height: 100px; /* Height and width */
-    width: 100px; /* Height and width */
+    height: 100px;
+    /* Height and width */
+    width: 100px;
+    /* Height and width */
     animation: time 8s steps(500, start) infinite;
-}
-.mask {
+  }
+
+  .mask {
     border-radius: 100% 0 0 100% / 50% 0 0 50%;
     height: 100%;
     left: 0;
@@ -2673,28 +2683,86 @@
     width: 50%;
     animation: mask 8s steps(250, start) infinite;
     transform-origin: 100% 50%;
-}
-@-webkit-keyframes time {
-    100% { 
-        transform: rotate(360deg);
-    }
-}
-@-webkit-keyframes mask {
-    0% {
-        background: #fafafa; /* Background colour */
-        transform: rotate(0deg);
-    }
-    50% {
-        background: #fafafa; /* Background colour */
-        transform: rotate(-180deg);
-    }
-    50.01% {
-        background: skyBlue; /* Foreground colour */
-        transform: rotate(0deg);
-    }
+  }
+
+  @-webkit-keyframes time {
     100% {
-        background: skyBlue; /* Foreground colour */
-        transform: rotate(-180deg);
+      transform: rotate(360deg);
     }
-}
+  }
+
+  @-webkit-keyframes mask {
+    0% {
+      background: #fafafa;
+      /* Background colour */
+      transform: rotate(0deg);
+    }
+
+    50% {
+      background: #fafafa;
+      /* Background colour */
+      transform: rotate(-180deg);
+    }
+
+    50.01% {
+      background: skyBlue;
+      /* Foreground colour */
+      transform: rotate(0deg);
+    }
+
+    100% {
+      background: skyBlue;
+      /* Foreground colour */
+      transform: rotate(-180deg);
+    }
+  }
+
+  /*LOADER-25*/
+
+  .loader-25 {
+    width: 100px;
+    height: 101px;
+    border: 8px solid;
+    border-top-color: hsl(154, 100%, 31%);
+    border-left-color: hsl(216, 87%, 52%);
+    border-bottom-color: hsl(8, 66%, 50%);
+    border-right-color: hsl(42, 100%, 51%);
+    border-radius: 50%;
+    transform: rotate(45deg);
+    margin: 30px auto;
+  }
+
+  p {
+    display: inline-block;
+    width: 107px;
+    height: 107px;
+    /* The background is used to specify the border background */
+    background: linear-gradient(90deg, #1e589900 0%,
+        #2c8bd800 76%,
+        #c2c2c2 85%,
+        #c2c2c2 100%);
+    /* W3C */
+    /* Background origin is the padding box by default.
+  Override to make the background cover the border as well. */
+    -moz-background-origin: border;
+    background-origin: border-box;
+    /* A transparent border determines the width */
+    border: 6px solid transparent;
+    border-radius: 50%;
+    box-shadow: inset -999px 0 0 #c2c2c2;
+    /* The background color */
+    transform: translate(-8px, 55px);
+    animation: loading 1s linear infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: translate(-9px, -25px) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(-9px, -25px) rotate(360deg);
+    }
+  }
+
 </style>
